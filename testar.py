@@ -21,6 +21,11 @@ if len(sys.argv) != 2:
     print '\t%s <arquivo-a-verificar>' % sys.argv[0]
     sys.exit(1)
 
+if sys.argv[1] == '-l':
+    for palavra in PALAVRAS:
+        print palavra
+    sys.exit(0)
+
 with open(sys.argv[1]) as arq_entrada:
     entrada = set()
     for lin in arq_entrada:
